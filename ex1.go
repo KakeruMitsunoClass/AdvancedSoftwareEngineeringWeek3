@@ -4,26 +4,6 @@ import (
 	"fmt"
 )
 
-// #include <iostream>
-
-// using namespace std;
-
-// string introm(int a) {
-//   int intnum[] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
-//   const char *romnum[] = {"M",  "CM", "D",  "CD", "C",  "XC", "L",
-//                           "XL", "X",  "IX", "V",  "IV", "I"};
-//   string s;
-//   int i = 0;
-//   while (a) {
-//     while (a / intnum[i]) {
-//       s += romnum[i];
-//       a -= intnum[i];
-//     }
-//     i++;
-//   }
-//   return s;
-// }
-
 func intToRome(n int) string {
 	// nは入力された数字
 
@@ -43,25 +23,6 @@ func intToRome(n int) string {
 		}
 		n = n % intnum[i]
 	}
-
-	// 	// 千の位を扱う
-	// 	if n > 0 {
-	// 		quo = n / 1000
-	// 	}
-
-	// 	for i := 1; i <= quo; i++ {
-	// 		rome += "M"
-	// 	}
-
-	// 	// 百の位を扱う
-	// 	n = n % 1000
-	// 	if n > 0 {
-	// 		quo = n / 1000
-	// 	}
-
-	// 	for i := 1; i <= quo; i++ {
-	// 		rome += "M"
-	// 	}
 
 	return rome
 
