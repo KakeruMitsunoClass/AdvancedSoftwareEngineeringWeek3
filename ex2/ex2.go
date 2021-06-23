@@ -16,11 +16,11 @@ func romaToInt(s string) int {
 
 	}
 	n := 0
-	number := [...]int{1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1}
-	roma := [...]string{"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"}
+	number := [...]int{1000, 500, 100, 50, 10, 5, 1}
+	roma := [...]string{"M", "D", "C", "L", "X", "V", "I"}
 
 	for i := 0; i < utf8.RuneCountInString(s); i++ {
-		for j := 0; j < 13; j++ {
+		for j := 0; j < 7; j++ {
 			if s[i:i+1] == roma[j] {
 				n += number[j]
 			}
